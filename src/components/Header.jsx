@@ -26,6 +26,7 @@ const Header = () => {
                    <div className="col-12 col-sm-6 col-md-8 h-100 pe-0 ps-1 m-0">
                        <Carousel />
                    </div>
+                   {/*
                    <div className="col-12 col-sm-6 col-md-4 small-images row p-0 m-0">
                          <div className="col-6 m-0 p-0">
                             <img 
@@ -54,9 +55,9 @@ const Header = () => {
                                 alt="konga assets"
                                 className='rounded'
                              />
-                         </div>
-                         
+                         </div>   
                    </div>
+                   */}
               </div>
              <div className="navigations d-none d-md-flex justify-content-center mt-1 mt-xl-2">
                  {  NavigationImages.map( 

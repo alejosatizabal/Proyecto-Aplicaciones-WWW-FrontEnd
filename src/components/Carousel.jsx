@@ -4,7 +4,8 @@ const Carousel = () => {
        
    //carousel images
     const [ images ] =  useState([
-       require('../Assets/advert5.png').default ,
+       //require('../Assets/advert5.jpg').default ,
+       require('../Assets/comp.jpg').default ,
        require('../Assets/comp.jpg').default ,
        require('../Assets/detergent.jpg').default ,
        require('../Assets/phones.jpg').default ,

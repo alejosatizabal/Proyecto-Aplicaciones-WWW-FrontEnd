@@ -21,15 +21,17 @@ export const Navbar = () => {
 
     return (
         <nav className='p-0 m-0 '>
-            <img
-                 src={`${require('../Assets/topimage.gif').default}`} 
-                 alt="conga" 
-                 className="top-image w-100 p-0 m-0 d-block" 
-            />
+            {/*   <img
+                    src={`${require('../Assets/topimage.gif').default}`} 
+                    alt="conga" 
+                    className="top-image w-100 p-0 m-0 d-block" 
+                />
+            */}
 
 {/*  navbar visible only in device that are > 768px ( tablet and desktop devices) */}
 
              <div className="desktop-navbar d-none d-md-block">
+                {/*
                 <div className="navigations d-flex justify-content-center">
                     { 
                         navigationImages.map( (imageSrc , index) => {
@@ -41,6 +43,7 @@ export const Navbar = () => {
                         } )
                     }
                 </div>
+                */}
                 <div 
                     className={`
                                  navbar-main d-flex                                
@@ -48,7 +51,7 @@ export const Navbar = () => {
                                  py-0 my-0
                                `}
                     style={{height:'50px'}}>
-
+                    {/*}
                      <div style={{ height:'100%' , width:'100px'}} className="d-inline-block bg-white">
                             <img
                                 src={ require('../Assets/logo-alternate.png').default}
@@ -59,10 +62,11 @@ export const Navbar = () => {
                       <div className='navbar-link d-flex align-items-center justify-content-center h-100 ms-2'>
                          <span> Store Location </span>
                       </div>
+                      
                       <div className='navbar-link d-flex align-items-center justify-content-center h-100 ms-2'>
                          <span> Sell On Conga </span>
                       </div>
-
+                      */}
                       <div className="input-group input-group-sm py-1 ms-2">
                             <input
                                  type="search" 
@@ -76,7 +80,7 @@ export const Navbar = () => {
                               <i className='fas fa-search'></i>
                             </span>
                       </div>
-
+                      {/*
                       <div className="dropdown h-100">
                         
                          <div className={`
@@ -102,6 +106,7 @@ export const Navbar = () => {
                                     <li className='ps-2 py-1'> 3.  Track My Order </li>  
                                 </ul>
                         </div>
+                    */}
                         <div className="dropdown h-100">
                         
   {/* sign up dropdown  */}
@@ -138,6 +143,7 @@ export const Navbar = () => {
                                     { <Login /> }
                                 </div>
                        </div>
+                       {/*
                        <div 
                            className={` 
                                      navbar-link d-flex align-items-center
@@ -150,7 +156,9 @@ export const Navbar = () => {
                                                     <sup> 0 </sup>
                                             </span>
                          </div>
+                        */}
                     </div>
+                    {/*
                     <div className= {`
                                        navigations-container m-0 p-0 w-100 mx-auto
                                         d-flex justify-content-center
@@ -169,6 +177,7 @@ export const Navbar = () => {
                                   <NavigationItems text = 'Baby Kids and Toys' />                                   
                                   <NavigationItems text = 'Apply On Deals' />
                     </div>
+                    */}
              </div>             
 {/* destop navbar end */}             
 
