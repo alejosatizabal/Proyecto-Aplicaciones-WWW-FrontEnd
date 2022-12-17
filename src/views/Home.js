@@ -14,12 +14,12 @@ const Home = () => {
   return (
     <>
       <Example />
+      <Link to='/home2'>Home2</Link>
       <Hero className="illustration-section-01" />
       <FeaturesTiles />
       <FeaturesSplit invertMobile topDivider imageFill className="illustration-section-02" />
       <Testimonial topDivider />
       <Cta split />
-      <Link to='/home2'>Home2</Link>
     </>
   );
 }

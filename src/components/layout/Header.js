@@ -4,6 +4,11 @@ import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 import Logo from './partials/Logo';
 
+import { useAuth0 } from '@auth0/auth0-react';
+import { LoginButton } from './Login';
+import { LogoutButton } from './Logout';
+import { Profile } from './Profile';
+
 const propTypes = {
   navPosition: PropTypes.string,
   hideNav: PropTypes.bool,
@@ -31,6 +36,8 @@ const Header = ({
 }) => {
 
   const [isActive, setIsactive] = useState(false);
+
+  const { loginWithRedirect, isAuthenticated, logout } = useAuth0();
 
   const nav = useRef(null);
   const hamburger = useRef(null);
@@ -120,7 +127,21 @@ const Header = ({
                       className="list-reset header-nav-right"
                     >
                       <li>
-                        <Link to="#0" className="button button-primary button-wide-mobile button-sm" onClick={closeMenu}>Sign up</Link>
+                        {/*<Link className="button button-primary button-wide-mobile button-sm" onClick={() => loginWithRedirect()}>Sign up</Link>*/}
+                        {/*<LoginButton />*/}
+                        {/*<LogoutButton />*/}
+                        {/*<Profile /></li>*/}
+                        {isAuthenticated ? (
+                          <>
+                            <ul>
+                              <Profile />
+                              <Link className="button button-primary button-wide-mobile button-sm" onClick={() => logout({ returnTo: window.location.origin}) }>Logout</Link>
+                              {/*<LogoutButton />*/}
+                            </ul>
+                          </>
+                        ) : (
+                          <Link className="button button-primary button-wide-mobile button-sm" onClick={() => loginWithRedirect()}>Login</Link>
+                        )}
                       </li>
                     </ul>}
                 </div>
